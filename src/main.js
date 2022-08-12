@@ -1,4 +1,11 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+// import { createApp } from 'vue'
+import App from "./App.vue";
+import { getRootContainer } from "./game";
+import { createApp } from "./runtime-canvas";
 
-createApp(App).mount('#app')
+// pixijs
+// canvas renderer
+
+console.warn = () => {}; //  消除warning 解决卡顿
+
+createApp(App).mount(getRootContainer());
